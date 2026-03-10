@@ -11,4 +11,17 @@ jobs:
     name: Démonstration CI
     runs-on: ubuntu-latest
 
+    # Définition des variables d’environnement pour les étapes du pipeline
+    env:
+      STEP1: "Workflow - Initialisation"
+    
+
+
+    steps:
+     # using variables d’environnement et secrets pour les étapes du pipeline
+      - name: Étape 1 - Variable workflow
+        run: |
+          echo "Démarrage du pipeline d’intégration continue"
+          echo "STEP1= $STEP1"
+
    
